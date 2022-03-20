@@ -1,0 +1,37 @@
+.btn{
+    background-color:#E0E0E0;
+    margin:5px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.primary{
+    background: #2962FF;
+}
+
+.secondary{
+    background: #455A64;
+}
+
+.danger{
+    background: #D32F2F;
+}
+
+.default{
+    background: #E0E0E0;
+}
+
+.outline{
+    border: 2px solid black;
+    background-color: white;
+}
+
+.text{
+    border-style: none;
+    background-color: white;
+}
+
+.text:hover{
+    background-color: aquamarine;
+}
