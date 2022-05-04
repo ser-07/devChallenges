@@ -1,37 +1,125 @@
+body{
+    background-color: rgb(101, 110, 219);
+}
+
+
 .btn{
     background-color:#E0E0E0;
     margin:5px;
-    height: 30px;
+    height: 36px; 
     width: 100px;
-    border-radius: 10px;
+    border-radius: 6px;
+    padding: 5px;
+    border: none ;
+    box-shadow: 0px 2px 3px rgba(51, 51, 51, 0.2);
+    /* border: 1px solid yellow; */
+    /* vertical-align: middle; */
 }
 
-.primary{
+.btn:hover{
+    background: #AEAEAE;
+}
+
+/* colors */
+
+.primary,.icon{
     background: #2962FF;
+}
+
+.primary:hover,.icon:hover{
+    background: #0039CB;;
 }
 
 .secondary{
     background: #455A64;
 }
 
+.secondary:hover{
+    background: #1C313A;
+}
+
 .danger{
     background: #D32F2F;
+}
+
+.danger:hover{
+    background:  #9A0007;
 }
 
 .default{
     background: #E0E0E0;
 }
 
+.default:hover{
+    background: #AEAEAE; 
+}
+
+/* Varients - Outline, text */
+
 .outline{
-    border: 2px solid black;
+    border: 1px solid #3D5AFE;
     background-color: white;
+}
+
+.outline:hover{
+    background: rgba(41, 98, 255, 0.1);
 }
 
 .text{
     border-style: none;
     background-color: white;
+    box-shadow: none;
+    color: #3D5AFE;
+
+}
+
+.text.disabled{
+    background-color: white;
+    color: 9E9E9E;
 }
 
 .text:hover{
-    background-color: aquamarine;
+    background: rgba(41, 98, 255, 0.1);
 }
+
+
+/* sizes */
+
+.sm{
+    height: 30px;
+}
+
+.lg{
+    height: 42px;
+}
+
+/* Disabled Varients */
+
+.disableShadow{
+    box-shadow: none;
+}
+
+.disabled{
+    background-color: #E0E0E0;
+    color: #858282;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
+.btn > span{
+   vertical-align: middle;
+
+    /* border: 1px solid green; */
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
