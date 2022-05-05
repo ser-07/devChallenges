@@ -119,6 +119,11 @@ body{
     justify-content: center;
 }
 
+.single-btn{
+    /* border: 1px solid #455A64 */
+    font-size: small;
+    margin: 0 10px;
+}
 
 
 

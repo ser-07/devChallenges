@@ -4,7 +4,7 @@
   flex-direction: column;
   height: 100%;
 
-  border: 2px solid green;
+  /* border: 2px solid green; */
   margin: 0 auto;
   justify-content: center;
   align-items: center;
@@ -13,9 +13,14 @@
 
 .app_container{
   background: white;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   border-radius: 10px;
-  width: 500px;
-  height: 700px;
+  width: 800px;
+  height: 100%;
+  padding: 10px;
+}
+
+h1{
+  font-size: x-large;
 }
 
