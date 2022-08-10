@@ -1,0 +1,35 @@
+.App {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  height: 100%;
+
+  /* border: 2px solid green; */
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.app_container{
+  background: white;
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  max-width: 800px;
+  height: 100%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+h1{
+  font-size: x-large;
+}
+
+@media screen and (max-width: 745px) {
+  .app_container{
+    /* background: yellow; */
+    width: 100%;
+  }
+  
+}
+
