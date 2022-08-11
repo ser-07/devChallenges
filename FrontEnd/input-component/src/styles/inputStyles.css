@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(101, 110, 219);
+}
+
+.container{
+    width: 400px;
+}
+
+/* Basics */
+.inp{
+    width: 200px;
+    height: 28px;
+    border: 1px solid #828282;
+    border-radius: 5px;
+}
+
+.inp:hover{
+    border: 1px solid #333333;
+}
+
+
+.inp:focus {
+    border: 0px solid green;
+}
+
+/* Sizes */
+
+.sm{
+    height: 20px
+}
+
+.lg{
+    height: 36px;
+}
+
+.fullwidth{
+    background-color: yellow;
+    width: 100%;
+}

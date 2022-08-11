@@ -1,4 +1,4 @@
-import React, { StrictMode } from "react";
+import React from "react";
 import { MdAddShoppingCart, MdAttachFile, MdNotStarted } from "react-icons/md";
 import "./buttonstyle.css";
 

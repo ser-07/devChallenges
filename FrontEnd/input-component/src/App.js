@@ -1,12 +1,12 @@
 import "./App.css";
-import ButtonsContent from "./components/ButtonsContent";
+import InputContent from "./components/InputContent";
 
 function App() {
   return (
     <div className="App">
       <div className="app_container">
-        <h1>Button Component</h1>
-        <ButtonsContent />
+        <h1>Input Component</h1>
+        <InputContent />
         <div>
           <p>Created by Sreejith [ser-07] - devChallenges.io</p>
           <a href="https://github.com/ser-07">GitHub</a>
