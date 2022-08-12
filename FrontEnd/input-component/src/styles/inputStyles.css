@@ -3,15 +3,47 @@ body{
 }
 
 .container{
-    width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.inp-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid red;
+}
+
+.inp-container{
+    margin: 5px;
+}
+
+
+.img-wrapper{
+    position: relative;
+}
+
+input{
+    padding-left: 30px;
+}
+
+.img-wrapper span{
+    position: absolute;
+    left: 2px;
+    padding-top: 3px;
 }
 
 /* Basics */
 .inp{
     width: 200px;
     height: 28px;
+    /* border: none;
+    outline: none; */
     border: 1px solid #828282;
     border-radius: 5px;
+
 }
 
 .inp:hover{
@@ -21,6 +53,24 @@ body{
 
 .inp:focus {
     border: 0px solid green;
+}
+
+
+p{
+    font-size: 12px;
+    margin:2px;
+}
+
+.error-text{
+    color: red; 
+}
+
+.disabled{
+    background-color: #51515174;
+}
+
+.error{
+    border: 1px solid red;
 }
 
 /* Sizes */
@@ -35,5 +85,66 @@ body{
 
 .fullwidth{
     background-color: yellow;
-    width: 100%;
+    
+}
+
+/* Colors */
+
+.primary,.icon{
+    background: #2962FF;
+    color: white;
+}
+
+.primary:hover,.icon:hover{
+    background: #0039CB;;
+}
+
+.primary::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.secondary{
+    background: #455A64;
+}
+
+.secondary:hover{
+    background: #1C313A;
+}
+
+.secondary::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.success{
+    background-color: green;
+    color: white;
+}
+
+.success::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.success:hover{
+    background-color: darkgreen
+}
+
+
+
+.danger{
+    background: #D32F2F;
+}
+
+.danger:hover{
+    background:  #9A0007;
+}
+
+.default{
+    background: rgb(255, 255, 255);
+}
+
+.default:hover{
+    background: rgb(255, 255, 255);
 }

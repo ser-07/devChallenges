@@ -1,9 +1,15 @@
 import React from "react";
 import "../styles/inputStyles.css";
+import SearchIcon from "@mui/icons-material/Search";
+import PhoneIcon from "@mui/icons-material/Phone";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import AddLinkIcon from "@mui/icons-material/AddLink";
 
 const InputField = ({
   color,
   size,
+  error,
   startIcon,
   endIcon,
   disabled,
@@ -15,26 +21,70 @@ const InputField = ({
   cols,
   name,
 }) => {
+  let icon_start;
+  switch (startIcon) {
+    case "search":
+      icon_start = <SearchIcon />;
+      break;
+    case "phone":
+      icon_start = <PhoneIcon />;
+      break;
+    case "amount":
+      icon_start = <CurrencyRupeeIcon />;
+      break;
+    case "card":
+      icon_start = <CreditCardIcon />;
+      break;
+    case "link":
+      icon_start = <AddLinkIcon />;
+      break;
+    default:
+      icon_start = null;
+  }
+
+  let icon_end;
+  switch (endIcon) {
+    case "search":
+      icon_end = <SearchIcon />;
+      break;
+    case "phone":
+      icon_end = <PhoneIcon />;
+      break;
+    case "amount":
+      icon_end = <CurrencyRupeeIcon />;
+      break;
+    case "card":
+      icon_end = <CreditCardIcon />;
+      break;
+    case "link":
+      icon_end = <AddLinkIcon />;
+      break;
+    default:
+      icon_end = null;
+  }
+
   return (
-    <div>
+    <div className="inp-container">
       {!multiline ? (
-        <div>
+        <div className="img-wrapper">
+          {startIcon && <span>{icon_start}</span>}
           <input
             disabled={disabled}
             type="text"
             placeholder={value}
-            className={`inp ${size} ${fullwidth ? "fullwidth" : ""}`}
-          />
-          {{ helperText } && <p>{helperText}</p>}
+            className={`inp ${size} ${fullwidth ? "fullwidth" : ""} ${color} ${
+              disabled && "disabled"
+            } ${error && "error"}`}
+          ></input>
+          {endIcon && <span>{icon_end}</span>}
+
+          {{ helperText } && (
+            <p className={`${error && "error-text"}`}>{helperText}</p>
+          )}
         </div>
       ) : (
         <div>
-          <textarea
-            name={name}
-            cols={cols}
-            rows={Number(rows)}
-            className="inp"
-          ></textarea>
+          <textarea name={name} cols={cols} rows={Number(rows)}></textarea>
           {{ helperText } && <p>{helperText}</p>}
         </div>
       )}
