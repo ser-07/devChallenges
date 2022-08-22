@@ -62,24 +62,28 @@ const InputField = ({
     default:
       icon_end = null;
   }
-
+  console.log(endIcon, startIcon);
   return (
     <div className="inp-container">
       {!multiline ? (
         <div className="img-wrapper">
-          {startIcon && <span>{icon_start}</span>}
+          {startIcon && <span className="icon_left">{icon_start}</span>}
           <input
             disabled={disabled}
             type="text"
             placeholder={value}
             className={`inp ${size} ${fullwidth ? "fullwidth" : ""} ${color} ${
               disabled && "disabled"
-            } ${error && "error"}`}
+            } ${error && "error"} ${startIcon && "icon_left_p"} ${
+              endIcon && "icon_right_p"
+            }`}
           ></input>
-          {endIcon && <span>{icon_end}</span>}
+          {endIcon && <span className="icon_right">{icon_end}</span>}
 
           {{ helperText } && (
-            <p className={`${error && "error-text"}`}>{helperText}</p>
+            <p className={`helper-text ${error && "error-text"}`}>
+              {helperText}
+            </p>
           )}
         </div>
       ) : (
