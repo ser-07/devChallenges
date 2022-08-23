@@ -2,12 +2,12 @@ import React from "react";
 import Cards from "./Cards";
 import ContentTitle from "./ContentTitle";
 
-const Content = () => {
+const Content = ({ data }) => {
+  // console.log("Title component", data.length);
   return (
     <div>
-      <h3>Content section</h3>
-      <ContentTitle />
-      <Cards />
+      <ContentTitle data={data} />
+      <Cards data={data} />
     </div>
   );
 };

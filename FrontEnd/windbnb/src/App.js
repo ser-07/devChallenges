@@ -1,9 +1,9 @@
 import Homepage from "./components/Homepage";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>WindBnB</h1>
       <Homepage />
     </div>
   );
