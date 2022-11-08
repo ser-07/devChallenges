@@ -1,12 +1,28 @@
 import React from "react";
 import "../styles/windBnB.css";
 
-const SearchButton = () => {
+const SearchButton = ({ showSearch, setShowSearch }) => {
   return (
     <div className="btn-filter">
-      <button className="nav-btn">Location</button>
+      <button
+        className="nav-btn"
+        onClick={() => {
+          setShowSearch(!showSearch);
+          console.log("Location Button clicked");
+        }}
+      >
+        Location
+      </button>
       <div className="btn-div"></div>
-      <button className="nav-btn">Add Guest</button>
+      <button
+        className="nav-btn"
+        onClick={() => {
+          setShowSearch(!showSearch);
+          console.log("Guest Button clicked");
+        }}
+      >
+        Add Guest
+      </button>
     </div>
   );
 };

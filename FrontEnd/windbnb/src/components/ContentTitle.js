@@ -3,10 +3,11 @@ import "../styles/windBnB.css";
 
 const ContentTitle = ({ data }) => {
   return (
-  <div className="title-row">
+    <div className="title-row">
       <h3>Stays in Place</h3>
-      <p>10 stays</p>
-  </div>)
+      <p>{data.length} stays</p>
+    </div>
+  );
 };
 
 export default ContentTitle;
